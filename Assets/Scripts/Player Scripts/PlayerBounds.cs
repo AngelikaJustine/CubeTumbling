@@ -6,6 +6,12 @@ public class PlayerBounds : MonoBehaviour {
 
     public float min_X = -2.6f, max_X = 2.6f, min_Y = -5.6f;
     private bool out_Of_Bounds;
+    GameObject panelSelesai;
+
+    void Start(){
+        panelSelesai = GameObject.Find ("PanelSelesai");
+        panelSelesai.SetActive (false);
+    }
 
     void Update() {
         CheckBounds();
@@ -30,8 +36,8 @@ public class PlayerBounds : MonoBehaviour {
                 out_Of_Bounds = true;
 
                  SoundManager.instance.DeathSound();
-                 GameManager.instance.RestartGame();
-
+                //  GameManager.instance.RestartGame();
+                panelSelesai.SetActive(true);
             }
 
         }
@@ -44,8 +50,8 @@ public class PlayerBounds : MonoBehaviour {
 
             transform.position = new Vector2(1000f, 1000f);
             SoundManager.instance.DeathSound();
-             GameManager.instance.RestartGame();
-
+            //  GameManager.instance.RestartGame();
+            panelSelesai.SetActive(true);
         }
 
     }

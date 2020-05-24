@@ -11,6 +11,13 @@ public class PlatformScript : MonoBehaviour {
 
     private Animator anim;
 
+    // GameObject panelSelesai;
+
+    // void Start(){
+    //     panelSelesai = GameObject.Find ("PanelSelesai");
+    //     panelSelesai.SetActive (false);
+    // }
+    
     void Awake() {
         if (is_Breakable)
             anim = GetComponent<Animator>();
@@ -49,7 +56,8 @@ public class PlatformScript : MonoBehaviour {
 
                 target.transform.position = new Vector2(1000f, 1000f);
                 SoundManager.instance.GameOverSound();
-                 GameManager.instance.RestartGame();
+                //  GameManager.instance.RestartGame();
+                // panelSelesai.SetActive(true);
 
             }
 
