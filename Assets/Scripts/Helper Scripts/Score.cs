@@ -10,6 +10,7 @@ public class Score : MonoBehaviour
     Text score;
 
     int scoreInt;
+    int highscore;
     int frames;
 
     private float startTime;
@@ -20,6 +21,8 @@ public class Score : MonoBehaviour
         score = GameObject.Find("Score").GetComponent<Text>();
         scoreInt = 0;
         startTime = Time.time;
+        highscore = PlayerPrefs.GetInt("Highscore");
+        // highscore = 0;
     }
 
     // Update is called once per frame
@@ -33,5 +36,11 @@ public class Score : MonoBehaviour
     {
         score.text = scoreInt + "";
         PlayerPrefs.SetInt("Score", scoreInt);
+
+        if (scoreInt > highscore)
+        {
+            PlayerPrefs.SetInt("Highscore", scoreInt);
+        }
+
     }
 }
