@@ -24,9 +24,4 @@ public class GameOverControl : MonoBehaviour
 
     }
 
-    public void StartGamePlay()
-    {
-        var nextLevel = (Application.loadedLevel + 2) % Application.levelCount;
-        Application.LoadLevel(nextLevel);
-    }
 }
