@@ -8,17 +8,25 @@ public class GameOverControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Application.platform == RuntimePlatform.Android){
-            if(Input.GetKey(KeyCode.Escape)){
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
                 SceneManager.LoadScene("GameOver");
             }
         }
-        
+
+    }
+
+    public void StartGamePlay()
+    {
+        var nextLevel = (Application.loadedLevel + 2) % Application.levelCount;
+        Application.LoadLevel(nextLevel);
     }
 }

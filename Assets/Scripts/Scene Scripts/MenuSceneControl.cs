@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class MenuSceneControl : MonoBehaviour
 {
     // int sceneIndex;
@@ -16,7 +17,7 @@ public class MenuSceneControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
     }
 
@@ -24,7 +25,8 @@ public class MenuSceneControl : MonoBehaviour
     //     SceneManager.LoadScene(sceneIndex+1);
     // }
 
-    public void changeMenuScene(string sceneName){
+    public void changeMenuScene(string sceneName)
+    {
         Application.LoadLevel(sceneName);
     }
 }

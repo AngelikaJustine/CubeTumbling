@@ -16,11 +16,13 @@ public class GameplaySceneControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Application.platform == RuntimePlatform.Android){
-            if(Input.GetKey(KeyCode.Escape)){
-                SceneManager.LoadScene(sceneIndex-1);
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                SceneManager.LoadScene(sceneIndex - 1);
             }
-                
+
         }
     }
 }
