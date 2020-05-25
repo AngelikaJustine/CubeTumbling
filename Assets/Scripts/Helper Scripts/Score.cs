@@ -13,6 +13,7 @@ public class Score : MonoBehaviour
     int highscore;
     int frames;
 
+    public int gameover;
     private float startTime;
 
     // Start is called before the first frame update
@@ -22,14 +23,18 @@ public class Score : MonoBehaviour
         scoreInt = 0;
         startTime = Time.time;
         highscore = PlayerPrefs.GetInt("Highscore");
+        gameover = 0;
         // highscore = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreInt = (int)(Time.time - startTime);
-        Scoring();
+        if (gameover == 0)
+        {
+            scoreInt = (int)(Time.time - startTime);
+            Scoring();
+        }
     }
 
     void Scoring()
@@ -42,5 +47,10 @@ public class Score : MonoBehaviour
             PlayerPrefs.SetInt("Highscore", scoreInt);
         }
 
+    }
+
+    public void gameOver()
+    {
+        gameover = 1;
     }
 }
