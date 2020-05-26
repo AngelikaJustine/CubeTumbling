@@ -8,7 +8,6 @@ public class Score : MonoBehaviour
 {
 
     Text score;
-
     int scoreInt;
     int highscore;
     int frames;
@@ -24,7 +23,6 @@ public class Score : MonoBehaviour
         startTime = Time.time;
         highscore = PlayerPrefs.GetInt("Highscore");
         gameover = 0;
-        // highscore = 0;
     }
 
     // Update is called once per frame

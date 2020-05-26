@@ -40,10 +40,7 @@ public class PlayerBounds : MonoBehaviour
             {
 
                 out_Of_Bounds = true;
-
                 SoundManager.instance.DeathSound();
-                //  GameManager.instance.RestartGame();
-                // Application.LoadLevel("GameOver");
                 StartCoroutine(WaitForSceneLoad());
             }
 
@@ -59,7 +56,6 @@ public class PlayerBounds : MonoBehaviour
 
             transform.position = new Vector2(1000f, 1000f);
             SoundManager.instance.DeathSound();
-            //  GameManager.instance.RestartGame();
             StartCoroutine(WaitForSceneLoad());
         }
 

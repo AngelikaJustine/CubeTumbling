@@ -9,6 +9,7 @@ public class Highscore : MonoBehaviour
 
     Text highscore;
     int scoreInt;
+
     // Start is called before the first frame update
     void Start()
     {
