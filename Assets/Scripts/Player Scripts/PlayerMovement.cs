@@ -21,17 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-
-        if (Input.GetAxisRaw("Horizontal") > 0f)
-        {
-            myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
-        }
-
-        if (Input.GetAxisRaw("Horizontal") < 0f)
-        {
-            myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
-        }
-
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
