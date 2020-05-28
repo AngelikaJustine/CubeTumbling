@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerBounds : MonoBehaviour
 {
 
-    public float min_X = -2.6f, max_X = 2.6f, min_Y = -5.6f;
+    public float min_X = -2.1f, max_X = 2.1f, min_Y = -5.6f;
     private bool out_Of_Bounds;
 
     public Score Score;

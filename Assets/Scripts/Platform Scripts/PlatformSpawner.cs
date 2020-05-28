@@ -9,12 +9,12 @@ public class PlatformSpawner : MonoBehaviour {
     public GameObject[] movingPlatforms;
     public GameObject breakablePlatform;
 
-    public float platform_Spawn_Timer = 1.8f;
+    public float platform_Spawn_Timer = 1.5f;
     private float current_Platform_Spawn_Timer;
 
     private int platform_Spawn_Count;
 
-    public float min_X = -2f, max_X = 2f;
+    public float min_X = -1.6f, max_X = 1.6f;
 
     // Start is called before the first frame update
     void Start() {

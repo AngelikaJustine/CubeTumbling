@@ -6,11 +6,9 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 
 {
-
     Text score;
     int scoreInt;
     int highscore;
-    int frames;
 
     public int gameover;
     private float startTime;
